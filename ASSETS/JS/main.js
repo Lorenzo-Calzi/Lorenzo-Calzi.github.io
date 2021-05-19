@@ -33,10 +33,9 @@ const app = new Vue({
             this.tasks.splice(index, 1)
         },
 
-        confirmTask(index, task) {
-            
+        confirmTask(index) {
             this.tasks.splice(index, 1)
-            this.completeTasks.push(task)
+            alert('Hai completato un task')
         },
     }
 });

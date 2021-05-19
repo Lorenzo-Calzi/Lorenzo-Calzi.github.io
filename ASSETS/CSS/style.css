@@ -1,3 +1,4 @@
+/* General Rules */
 *{
     border: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body{
     align-items: center;
     height: 100vh;
 }
+/* General Rules */
 
 
 .logo{
@@ -65,12 +67,6 @@ body{
     cursor: pointer;
 }
 .no_tasks{
-    padding: 10px;
-    background-color: rgba(211, 211, 211, 1);
-    border-radius: 10px;
-}
-
-.prova{
     padding: 10px;
     background-color: rgba(211, 211, 211, 1);
     border-radius: 10px;
