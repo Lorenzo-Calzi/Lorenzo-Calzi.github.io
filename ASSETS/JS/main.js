@@ -6,8 +6,7 @@ const app = new Vue({
         logo: 'https://www.boolean.careers/images/misc/logo.png',
 
         newTask: '',
-        /* completeTask: '',
-        counter: 0, */
+        completeTask: 'prova',
 
         tasks: [
             'Learn HTML',
@@ -19,7 +18,9 @@ const app = new Vue({
 
         addTask() {
             this.tasks.push(this.newTask)
-            this.newTask = ''
+            this.newTask = '',
+            console.log('Qui' + this.completeTask);
+            
         },
 
         removeTask(index) {
@@ -27,21 +28,14 @@ const app = new Vue({
             this.tasks.splice(index, 1)
         },
 
-        confirmTask(index, array) {
+        confirmTask(index) {
             
             console.log('confirm ' + index);
             this.tasks.splice(index, 1)
-            /* this.tasks.push(array) */
-            
-            /* console.log(counter); */
-            /* this.tasks.push('completeTask')
-
-            console.log(completeTask) */
+            return(alert('Ho completato una task'))
+            /* this.tasks.push(this.completeTask) */
+            /* this.completeTask.push(this.tasks) */
         }
 
     }
 });
-
-/* var x = [];
-x = confirmTask()
- */

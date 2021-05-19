@@ -1,0 +1,51 @@
+/* .task{
+    display: block;
+    width: 7%;
+} */
+
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(176, 196, 222, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.logo{
+    display: flex;  
+    justify-content: center;
+}
+.add_task{
+    margin: 10px;
+}
+.add_task input,
+.add_task button{
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.add_task button{
+    cursor: pointer;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 3px 20px 3px;
+}
+.tasks{
+    background-color: rgb(255, 255, 255);
+    padding: 15px 15px 50px 15px;
+    border-radius: 10px;
+}
+.container_task{
+    background-color: rgba(211, 211, 211, 1);
+    padding: 10px;
+    border-radius: 5px;
+}

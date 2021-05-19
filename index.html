@@ -13,20 +13,26 @@
     <div id="app">
 
         <div class="logo">
-            <img :src="logo" alt="" width="120">
+            <img :src="logo" alt="" width="250">
         </div>
 
         <div class="add_task">
             <input v-model="newTask" placeholder="Add Your Task Here" @keyup.enter="addTask">
-            <button @click="addTask">Add Task</button>
+            <button @click="addTask">Add</button>
         </div>
 
 
         <div class="tasks" v-if="tasks.length > 0">
-            <div class="task" v-for="(task, index) in tasks" contenteditable="true">{{task}}
-            <!-- <input  class="task" v-for="(task, index) in tasks">{{task}} -->
-            <i class="fas fa-check-circle" @click="confirmTask(index)"></i>
-            <i class="fas fa-times-circle" @click="removeTask(index)"></i></div>
+            <span>Todo List</span>
+            <div class="container_task">
+                <div class="task" v-for="(task, index) in tasks" contenteditable="true">{{task}}
+                    <!-- <input  class="task" v-for="(task, index) in tasks">{{task}} -->
+                    <div class="icons">
+                        <i class="fas fa-check-circle" @click="confirmTask(index)"></i>
+                        <i class="fas fa-times-circle" @click="removeTask(index)"></i>
+                    </div>
+               </div>
+            </div>
         </div>
 
         <div class="no_tasks" v-else>
