@@ -1,7 +1,9 @@
+/* Common Rules */
 *{
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
 }
 body{
     background-color: rgba(176, 196, 222, 1);
@@ -10,14 +12,14 @@ body{
     align-items: center;
     height: 100vh;
 }
-
+/* Common Rules */
 
 .logo{
     display: flex;  
     justify-content: center;
 }
 .add_task{
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
 }
@@ -37,11 +39,18 @@ body{
     justify-content: center;
     margin-bottom: 20px;
 }
+.message span{
+    font-size: 13px;
+}
+.container_tasks{
+    display: flex;
+}
 .tasks{
     background-color: rgb(255, 255, 255);
     padding: 15px 20px 60px 20px;
     border-radius: 10px;
     font-size: 20px;
+    margin: 20px;
 }
 .title{
     font-size: 23px;
@@ -50,11 +59,13 @@ body{
 .container_task{
     background-color: rgba(211, 211, 211, 1);
     padding: 10px;
+    margin-top: 5px;
     border-radius: 5px;
 }
 .task{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 3px 3px 10px 3px;   
 }
 .icons{
@@ -65,12 +76,6 @@ body{
     cursor: pointer;
 }
 .no_tasks{
-    padding: 10px;
-    background-color: rgba(211, 211, 211, 1);
-    border-radius: 10px;
-}
-
-.prova{
     padding: 10px;
     background-color: rgba(211, 211, 211, 1);
     border-radius: 10px;

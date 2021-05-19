@@ -39,9 +39,13 @@ const app = new Vue({
         },
 
         confirmTask(index, task) {
-            
             this.tasks.splice(index, 1)
             this.completeTasks.push(task)
         },
+
+        reload(index, task) {
+            this.tasks.splice(index, 1)
+            /* this.tasks.push(task) */
+        }
     }
 });

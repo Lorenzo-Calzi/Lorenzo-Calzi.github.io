@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css "integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w== "crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./ASSETS/CSS/style.css">
     <title>To Do List</title>
 </head>
@@ -14,7 +16,7 @@
 
         <!-- Logo -->
         <div class="logo">
-            <img :src="logo" alt="" width="250">
+            <img :src="logo" alt="" width="300">
         </div>
         <!-- /Logo -->
 
@@ -29,47 +31,55 @@
             <span>Add a simple task todo</span>
         </div>
 
-        <!-- To Do List -->
-        <div class="tasks" v-if="tasks.length > 0">
-            <span class="title">Todo List</span>
-            <div class="container_task">
-                <div class="task" v-for="(task, index) in tasks" >
-                    <span contenteditable="true">{{task}}</span>
-                    <div class="icons">
-                        <i class="fas fa-check-circle" @click="confirmTask(index, tasks[index])"></i>
-                        <i class="fas fa-trash" @click="removeTask(index, tasks[index])"></i>
+        <div class="container_tasks">
+
+             <!-- To Do List -->
+            <div class="tasks" v-if="tasks.length > 0">
+                <span class="title">Todo List</span>
+                <div class="container_task">
+                    <div class="task" v-for="(task, index) in tasks" >
+                        <span contenteditable="true">{{task}}</span>
+                        <div class="icons">
+                            <i class="fas fa-check-circle" @click="confirmTask(index, tasks[index])"></i>
+                            <i class="fas fa-trash" @click="removeTask(index, tasks[index])"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="no_tasks" v-else>
-            <p>Nothing to do</p>
-        </div>
-        <!-- /To Do List -->
+            <div class="no_tasks" v-else>
+                <p>Nothing to do</p>
+            </div>
+            <!-- /To Do List -->
 
-        <!-- Complete -->
-        <div class="complete">
-            <h3 class="prova">
+            <!-- Complete -->
+            <div class="tasks">
                 <span class="title">Completed</span>
-                <div class="task" v-for="(task, index) in completeTasks" contenteditable="true">{{task}}
-                    
+                <div class="container_task">
+                    <div class="task" v-for="(task, index) in completeTasks">{{task}}
+                        <div class="icons">
+                            <i class="fas fa-undo-alt"></i>
+                        </div>
+                    </div>
+                
                 </div>
-            </h3>
-        </div>
-        <!-- Complete -->
+            </div>
+            <!-- Complete -->
 
-        <!-- Delete -->
-        <div class="complete">
-            <h3 class="prova">
+            <!-- Delete -->
+            <div class="tasks">
                 <span class="title">Deleted</span>
-                <div class="task" v-for="(task, index) in deleteTasks" contenteditable="true">{{task}}
-                    
+                <div class="container_task">
+                    <div class="task" v-for="(task, index) in deleteTasks">{{task}}
+                        <div class="icons">
+                            <i class="fas fa-trash-restore-alt" @reload="(index, tasks[index])"></i>
+                        </div>
+                    </div>
                 </div>
-            </h3>
-        </div>
-        <!-- Delete -->
+            </div>
+            <!-- Delete -->
 
+        </div>
     </div>
 
 
