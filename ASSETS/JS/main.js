@@ -6,21 +6,26 @@ const app = new Vue({
         logo: 'https://www.boolean.careers/images/misc/logo.png',
 
         newTask: '',
-        completeTask: 'prova',
+        completeTasks: [
+            'ciao'
+        ],
 
         tasks: [
-            'Learn HTML',
-            'Learn CSS',
-            'Learn JS'
+            'Do something',
+            'Do else',
+            'Do something else'
         ]
     },
     methods: {
 
         addTask() {
-            this.tasks.push(this.newTask)
-            this.newTask = '',
-            console.log('Qui' + this.completeTask);
-            
+            if (this.newTask.length > 3 ) { 
+                    this.tasks.push(this.newTask)
+                    this.newTask = '',
+                    console.log('Qui' + this.completeTask);
+                } else{
+                    alert('Il testo inserito è troppo breve')
+                }
         },
 
         removeTask(index) {
@@ -28,14 +33,10 @@ const app = new Vue({
             this.tasks.splice(index, 1)
         },
 
-        confirmTask(index) {
+        confirmTask(index, task) {
             
-            console.log('confirm ' + index);
             this.tasks.splice(index, 1)
-            return(alert('Ho completato una task'))
-            /* this.tasks.push(this.completeTask) */
-            /* this.completeTask.push(this.tasks) */
-        }
-
+            this.completeTasks.push(task)
+        },
     }
 });

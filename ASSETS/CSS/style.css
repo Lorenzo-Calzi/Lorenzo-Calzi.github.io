@@ -1,9 +1,3 @@
-/* .task{
-    display: block;
-    width: 7%;
-} */
-
-
 *{
     border: 0;
     padding: 0;
@@ -23,29 +17,61 @@ body{
     justify-content: center;
 }
 .add_task{
-    margin: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 .add_task input,
 .add_task button{
-    padding: 5px;
+    padding: 10px;
+    margin: 5px;
     border-radius: 5px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
 }
 .add_task button{
     cursor: pointer;
 }
-.task{
+.message{
     display: flex;
-    justify-content: space-between;
-    margin: 3px 3px 20px 3px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 .tasks{
     background-color: rgb(255, 255, 255);
-    padding: 15px 15px 50px 15px;
+    padding: 15px 20px 60px 20px;
     border-radius: 10px;
+    font-size: 20px;
+}
+.title{
+    font-size: 23px;
+    font-weight: 600;
 }
 .container_task{
     background-color: rgba(211, 211, 211, 1);
     padding: 10px;
     border-radius: 5px;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 3px 10px 3px;   
+}
+.icons{
+    margin-left: 40px;
+}
+.icons i{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.no_tasks{
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 1);
+    border-radius: 10px;
+}
+
+.prova{
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 1);
+    border-radius: 10px;
 }
