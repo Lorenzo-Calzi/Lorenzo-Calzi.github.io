@@ -26,8 +26,7 @@ const app = new Vue({
         addTask() {
             if (this.newTask.length > 3 ) { 
                     this.tasks.push(this.newTask)
-                    this.newTask = '',
-                    console.log('Qui' + this.completeTask);
+                    this.newTask = '';
                 } else{
                     alert('Il testo inserito è troppo breve')
                 }
@@ -43,9 +42,18 @@ const app = new Vue({
             this.completeTasks.push(task)
         },
 
-        reload(index, task) {
-            this.tasks.splice(index, 1)
-            /* this.tasks.push(task) */
+        reload(index) {
+            this.tasks.push(this.completeTasks[index])
+            this.completeTasks.splice(index, 1) 
+        },
+
+        fishOut(index) {
+            this.tasks.push(this.deleteTasks[index])
+            this.deleteTasks.splice(index, 1)
+        },
+
+        clearAll() {
+            this.deleteTasks = []
         }
     }
 });

@@ -58,7 +58,7 @@
                 <div class="container_task">
                     <div class="task" v-for="(task, index) in completeTasks">{{task}}
                         <div class="icons">
-                            <i class="fas fa-undo-alt"></i>
+                            <i class="fas fa-undo-alt" @click="reload(index, tasks[index])"></i>
                         </div>
                     </div>
                 
@@ -68,11 +68,11 @@
 
             <!-- Delete -->
             <div class="tasks">
-                <span class="title">Deleted</span>
+                <span class="title">Trashed</span> <span class="subtitle" href="" @click="clearAll">( Empty bin )</span>
                 <div class="container_task">
                     <div class="task" v-for="(task, index) in deleteTasks">{{task}}
                         <div class="icons">
-                            <i class="fas fa-trash-restore-alt" @reload="(index, tasks[index])"></i>
+                            <i class="fas fa-trash-restore-alt" @click="fishOut(index, tasks[index])"></i>
                         </div>
                     </div>
                 </div>

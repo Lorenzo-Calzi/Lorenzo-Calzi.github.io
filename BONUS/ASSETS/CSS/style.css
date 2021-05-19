@@ -28,7 +28,7 @@ body{
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
 }
 .add_task button{
@@ -40,7 +40,7 @@ body{
     margin-bottom: 20px;
 }
 .message span{
-    font-size: 13px;
+    font-size: 14px;
 }
 .container_tasks{
     display: flex;
@@ -79,4 +79,8 @@ body{
     padding: 10px;
     background-color: rgba(211, 211, 211, 1);
     border-radius: 10px;
+}
+.subtitle{
+    color: #800080;
+    text-decoration: underline;
 }
