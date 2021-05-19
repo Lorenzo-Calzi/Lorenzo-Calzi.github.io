@@ -3,7 +3,7 @@ const app = new Vue({
 
     data: {
 
-        logo: 'https://www.boolean.careers/images/misc/logo.png',
+        logo: './IMG/logo_boolean.png',
 
         newTask: '',
         completeTasks: [
