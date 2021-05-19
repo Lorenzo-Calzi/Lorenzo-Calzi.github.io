@@ -48,7 +48,8 @@
             </div>
 
             <div class="no_tasks" v-else>
-                <p>Nothing to do</p>
+                <span class="title">Nothing to do</span>
+                <i class="fas fa-plus"></i>
             </div>
             <!-- /To Do List -->
 
@@ -61,14 +62,13 @@
                             <i class="fas fa-undo-alt" @click="reload(index, tasks[index])"></i>
                         </div>
                     </div>
-                
                 </div>
             </div>
             <!-- Complete -->
 
             <!-- Delete -->
             <div class="tasks">
-                <span class="title">Trashed</span> <span class="subtitle" href="" @click="clearAll">( Empty bin )</span>
+                <span class="title">Trashed</span> <span href="" @click="clearAll">( <span class="subtitle">Empty byn</span> )</span>
                 <div class="container_task">
                     <div class="task" v-for="(task, index) in deleteTasks">{{task}}
                         <div class="icons">

@@ -52,6 +52,22 @@ body{
     font-size: 20px;
     margin: 20px;
 }
+.no_tasks{
+    background-color: white;
+    padding: 15px 20px 60px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+.no_tasks i{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .title{
     font-size: 23px;
     font-weight: 600;
@@ -75,12 +91,8 @@ body{
     padding-left: 10px;
     cursor: pointer;
 }
-.no_tasks{
-    padding: 10px;
-    background-color: rgba(211, 211, 211, 1);
-    border-radius: 10px;
-}
 .subtitle{
     color: #800080;
     text-decoration: underline;
+    font-weight: 700;
 }

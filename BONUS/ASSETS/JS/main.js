@@ -3,22 +3,18 @@ const app = new Vue({
 
     data: {
 
-        logo: 'https://www.boolean.careers/images/misc/logo.png',
+        logo: '../BONUS/IMG/logo_boolean.png',
 
         newTask: '',
 
-        completeTasks: [
-            
-        ],
+        completeTasks: [],
 
-        deleteTasks: [
-            
-        ],
+        deleteTasks: [],
 
         tasks: [
-            'Do something',
-            'Do else',
-            'Do something else'
+            'Andare In Palestra',
+            'Fare La Spesa',
+            'Rinnovare Spotify'
         ]
     },
     methods: {
@@ -53,7 +49,7 @@ const app = new Vue({
         },
 
         clearAll() {
-            this.deleteTasks = []
+                this.deleteTasks = []
         }
     }
 });
