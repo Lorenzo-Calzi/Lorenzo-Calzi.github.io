@@ -59,6 +59,10 @@ body{
     justify-content: space-between;
     margin: 3px 3px 10px 3px;   
 }
+.task input{
+    background-color: rgba(211, 211, 211, 1);
+    font-size: 20px;
+}
 .icons{
     margin-left: 40px;
 }
