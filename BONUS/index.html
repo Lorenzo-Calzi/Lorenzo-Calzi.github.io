@@ -33,12 +33,12 @@
 
         <div class="container_tasks">
 
-             <!-- To Do List -->
+            <!-- To Do List -->
             <div class="tasks" v-if="tasks.length > 0">
                 <span class="title">Todo List</span>
                 <div class="container_task">
                     <div class="task" v-for="(task, index) in tasks" >
-                        <span contenteditable="true">{{task}}</span>
+                        <input v-model="tasks[index]">
                         <div class="icons">
                             <i class="fas fa-check-circle" @click="confirmTask(index, tasks[index])"></i>
                             <i class="fas fa-trash" @click="removeTask(index, tasks[index])"></i>

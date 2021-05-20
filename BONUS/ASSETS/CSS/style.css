@@ -52,6 +52,10 @@ body{
     font-size: 20px;
     margin: 20px;
 }
+.task input{
+    background-color: rgba(211, 211, 211, 1);
+    font-size: 20px;
+}
 .no_tasks{
     background-color: white;
     padding: 15px 20px 60px 20px;
