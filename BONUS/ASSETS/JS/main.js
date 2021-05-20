@@ -21,7 +21,7 @@ const app = new Vue({
 
         addTask() {
             if (this.newTask.length > 3 ) { 
-                    this.tasks.push(this.newTask)
+                    this.tasks.unshift(this.newTask)
                     this.newTask = '';
                 } else{
                     alert('Il testo inserito è troppo breve')
@@ -29,13 +29,13 @@ const app = new Vue({
         },
 
         removeTask(index, task) {
+            this.deleteTasks.unshift(task)
             this.tasks.splice(index, 1)
-            this.deleteTasks.push(task)
         },
 
         confirmTask(index, task) {
+            this.completeTasks.unshift(task)
             this.tasks.splice(index, 1)
-            this.completeTasks.push(task)
         },
 
         reload(index) {
@@ -49,7 +49,10 @@ const app = new Vue({
         },
 
         clearAll() {
+            const destroy = confirm('Sei sicuro di voler svuotare il cestino?')
+            if(destroy) {
                 this.deleteTasks = []
+            }
         }
     }
 });

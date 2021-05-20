@@ -54,7 +54,7 @@
             <!-- /To Do List -->
 
             <!-- Complete -->
-            <div class="tasks">
+            <div class="tasks" v-if="completeTasks.length > 0">
                 <span class="title">Completed</span>
                 <div class="container_task">
                     <div class="task" v-for="(task, index) in completeTasks">{{task}}
@@ -67,7 +67,7 @@
             <!-- Complete -->
 
             <!-- Delete -->
-            <div class="tasks">
+            <div class="tasks" v-if="deleteTasks.length > 0">
                 <span class="title">Trashed</span> <span href="" @click="clearAll">( <span class="subtitle">Empty byn</span> )</span>
                 <div class="container_task">
                     <div class="task" v-for="(task, index) in deleteTasks">{{task}}
